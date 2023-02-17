@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="stylesheet" href="sass/style.scss" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Checkout page</title>
+  </head>
+  <body>
+    <main>
+      <div class="container">
+        <div class="checkout">
+          <h2 class="checkout__header">Checkout</h2>
+          <p class="checkout__lead">There are 3 products in your cart</p>
+          <form class="billing-details">
+            <h2>Billing details</h2>
+            <fieldset class="billing-details__fieldset">
+              <label
+                for="firstName"
+                class="visually-hidden billing-details__label"
+                >First name:</label
+              >
+              <input
+                class="billing-details__input"
+                type="text"
+                id="firstName"
+                value="First Name*"
+                autocomplete="given-name"
+              />
+              <label
+                for="lastName"
+                class="visually-hidden billing-details__label"
+                >Last name:</label
+              >
+              <input
+                class="billing-details__input"
+                type="text"
+                id="lastName"
+                value="Last Name*"
+                autocomplete="family-name"
+              />
+              <label for="email" class="visually-hidden billing-details__label"
+                >Emal:</label
+              >
+              <input
+                class="billing-details__input"
+                type="text"
+                id="email"
+                value="E-mail*"
+                autocomplete="email"
+              />
+              <label for="tel" class="visually-hidden billing-details__label"
+                >Emal:</label
+              >
+              <input
+                class="billing-details__input"
+                type="text"
+                id="tel"
+                value="Tel. number*"
+                autocomplete="tel"
+              />
+            </fieldset>
+            <fieldset class="billing-details__fieldset">
+              <label
+                for="address"
+                class="visually-hidden billing-details__label"
+                >Address:</label
+              >
+              <input
+                class="billing-details__input"
+                type="text"
+                id="address"
+                value="address*"
+                autocomplete="address-line1"
+              />
+              <label
+                for="address-line-2"
+                class="billing-details__label visually-hidden"
+                >Address line 2:</label
+              >
+              <input
+                class="billing-details__input"
+                type="text"
+                id="address-line-2"
+                value="address line 2"
+                autocomplete="address-line2"
+              />
+              <label
+                for="country"
+                class="visually-hidden billing-details__label"
+                >Select country:</label
+              >
+              <select name="country" id="country">
+                <option value="">Country*</option>
+                <option value="cz">Czech Republic</option>
+                <option value="ge">Germany</option>
+                <option value="fr">France</option>
+              </select>
+              <label for="city" class="visually-hidden billing-details__label"
+                >City:</label
+              >
+              <input
+                class="visually-hidden billing-details__input"
+                type="text"
+                id="city"
+                value="City"
+                autocomplete="address-level2"
+              />
+              <label
+                for="postal-code"
+                class="visually-hidden billing-details__label"
+                >City:</label
+              >
+              <input
+                class="billing-details__input"
+                type="text"
+                id="postal-code"
+                value="Postalcode/ZIP*"
+                autocomplete="address-level2"
+              />
+            </fieldset>
+            <fieldset class="billing-details__fieldset">
+              <label
+                for="additional-information"
+                class="visually-hidden billing-details__label"
+                >Additional information:</label
+              >
+              <textarea
+                name="additional-information"
+                id="additional-information"
+                cols="30"
+                rows="10"
+                class="billing-details__input"
+              ></textarea>
+            </fieldset>
+            <fieldset class="billing-details__fieldset">
+              <input
+                type="checkbox"
+                id="create-account"
+                name="create-account"
+                class="billing-details__input"
+              />
+              <label for="create-account" class="billing-details__label"
+                >Create account</label
+              >
+              <input
+                type="checkbox"
+                id="shipping"
+                name="shipping"
+                class="billing-details__input"
+              />
+              <label for="shipping" class="billing-details__label"
+                >Ship to a different address</label
+              >
+            </fieldset>
+            <fieldset class="billing-details__fieldset">
+              <legend>Apply coupon to get discount</legend>
+              <label for="coupon" class="visually-hidden">Enter coupon:</label>
+              <input type="text" id="coupon" class="billing-details__input" />
+              <button type="submit" class="btn">Apply Code</button>
+            </fieldset>
+          </form>
+        </div>
+        <div class="order-information">
+          <h2>Your order</h2>
+          <header class="order-information__header header">
+            <span class="header__text">Product</span>
+            <span class="header__text">Subtotal</span>
+          </header>
+          <ul class="cart__items">
+            <li class="cart__item item">
+              <img src="" alt="white t-shirt" class="item__img" />
+              <div class="item__information">
+                <h3 class="item__name">Men's t-shirt</h3>
+                <div>
+                  <span class="item__colour">White</span>
+                  <span class="item__size">XL</span>
+                  <span class="item__quantity">1</span>
+                </div>
+              </div>
+            </li>
+            <li class="cart__item item">
+              <img src="" alt="white t-shirt" class="item__img" />
+              <div class="item__information">
+                <h3 class="item__name">Women's t-shirt</h3>
+                <div>
+                  <span class="item__colour">Black</span>
+                  <span class="item__size">L</span>
+                  <span class="item__quantity">1</span>
+                </div>
+              </div>
+            </li>
+            <li class="cart__item item">
+              <img src="" alt="white t-shirt" class="item__img" />
+              <div class="item__information">
+                <h3 class="item__name">Men's t-shirt</h3>
+                <div>
+                  <span class="item__colour">Blue</span>
+                  <span class="item__size">M</span>
+                  <span class="item__quantity">2</span>
+                </div>
+              </div>
+            </li>
+          </ul>
+          <div class="payment-recap">
+            <div class="payment-recap__subtotal">
+              <span>Subtotal</span>
+              <span>$108.00</span>
+            </div>
+            <div class="payment-recap__shiping">
+              <span>Shiping cost</span>
+              <span>$10.85</span>
+            </div>
+            <div class="payment-recap__discount">
+              <span>Discount</span>
+              <span>$9.00</span>
+            </div>
+          </div>
+          <div class="payment-total">
+            <span>Total payable</span>
+            <span>$109.85</span>
+          </div>
+        </div>
+        <form action="" class="payment">
+          <fieldset class="payment__fieldset">
+            <legend class="payment__legend">Select payment option:</legend>
+            <input
+              type="radio"
+              id="bank"
+              name="payment-option"
+              value="bank"
+              checked
+              class="payment__input"
+            />
+            <label for="bank" class="payment__label"
+              >Direct bank transfer</label
+            >
+            <input
+              type="radio"
+              id="card"
+              name="payment-option"
+              value="card"
+              class="payment__input"
+            />
+            <label for="card" class="payment__label">Online gateway</label>
+            <input
+              type="radio"
+              id="cash"
+              name="payment-option"
+              value="cash"
+              class="payment__input"
+            />
+            <label for="cash" class="payment__label">Cash on delivery</label>
+          </fieldset>
+        </form>
+      </div>
+    </main>
+  </body>
+</html>
